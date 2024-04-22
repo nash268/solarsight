@@ -1,47 +1,35 @@
 // Add JS here
 
-window.onload = function (){
-    todoListDisplay = document.getElementById('todo-list');
-    const todoList = getTodoList();
-    todoList.forEach(item => {
-        task = document.createElement('li');
-        task.textContent = item;
-        todoListDisplay.appendChild(task);
-    });
-}
+function MenuFunction(){
 
-function getTodoList(){
-    const storedList = localStorage.getItem('todoList');
-    if(storedList){
-        return JSON.parse(storedList);
+    function openMenu() {
+        console.log("open menu")
+        document.getElementById("menu-modal").style.display = "block";
     }
-    return [];
+
+    // Close the modal
+    function closeMenu() {
+        document.getElementById("menu-modal").style.display = "none";
+    }
+
+    // Close the modal when clicking outside of it
+    window.onclick = function(event) {
+        var modal = document.getElementById("menu-modal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    document.getElementById('open-menu').addEventListener(
+        'click',
+        openMenu
+    )
+
+    document.getElementById('close-menu').addEventListener(
+        'click',
+        closeMenu
+    )
+
 }
 
-function saveTodoList(todoList){
-    localStorage.setItem('todoList', JSON.stringify(todoList));
-}
-
-function deleteTodoList(){
-    localStorage.removeItem('todoList');
-
-    const todoListDisplay = document.getElementById('todo-list');
-    todoListDisplay.innerHTML = '';
-}
-
-
-function addTask(){
-    let todoList = getTodoList();
-
-    todoListDisplay = document.getElementById('todo-list');
-    taskInput = document.getElementById('task-input');
-
-    task = document.createElement('li');
-    task.textContent = taskInput.value;
-    todoListDisplay.appendChild(task);
-
-    todoList.push(taskInput.value);
-    saveTodoList(todoList);
-
-    taskInput.value = '';
-}
+MenuFunction();

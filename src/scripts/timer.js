@@ -1,4 +1,4 @@
-function main(){
+function TimerFunction(){
 
     let timerInterval = null;;
     let hours = 0;
@@ -99,7 +99,7 @@ function main(){
         if (!isTimerRunning){
             // run updateTimer every second 
             // replace 1 with 1000 to run every second
-            timerInterval = setInterval(updateTimer, 1);
+            timerInterval = setInterval(updateTimer, 1000);
 
             // timer is running now
             isTimerRunning = true;
@@ -176,4 +176,4 @@ function main(){
 
 }
 
-main();
+TimerFunction();

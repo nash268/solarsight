@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Sight</title>
+    <link rel="stylesheet" href="/src/styles/style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Solar Sight</h1>
+    </header>
+    <div style="padding:20px;">
+        <h1>Lux Meter</h1>
+        <video id="video" width="95%" height="70%" autoplay></video>
+        <p>Estimated Luminance: <span id="lux"></span></p>
+
+        <input type="file" accept="image/*" capture="environment" id="captureInput">
+        <div id="luxDisplay"></div>
+
+        
+        <script src="/src/scripts/luxmeter.js"></script>
+    </div>
+</div>
+    <footer>
+        <a class="button" href="/" style="display:-webkit-inline-box;"> &#8592; Back</a>
+    </footer>
+</body>
+</html>
