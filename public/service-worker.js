@@ -9,9 +9,11 @@ const urlsToCache = [
   '/src/styles/style.css',
   '/src/scripts/main.js',
   '/src/scripts/timer.js',
+  '/src/scripts/luxmeter.js',
   '/pages/about.html',
   '/pages/readings.html',
   '/pages/statistics.html',
+  '/pages/luxmeter.html',
 ];
 
 self.addEventListener('install', (event) => {
