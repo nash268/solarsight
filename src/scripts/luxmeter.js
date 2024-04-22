@@ -6,9 +6,9 @@ const constraints = {
 };
 
 // Accessing Camera with back camera
-// { video: true }
+// { video: true } = front cam
 // or
-// constraints
+// constraints = back cam
 navigator.mediaDevices.getUserMedia(constraints)
   .then(function(stream) {
     video.srcObject = stream;
