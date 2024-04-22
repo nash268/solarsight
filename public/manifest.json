@@ -1,0 +1,15 @@
+{
+  "short_name": "SolarSight",
+  "name": "Solar Sight",
+  "icons": [
+    {
+      "src": "/public/assets/eye-512px.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#007bff",
+  "background_color": "#ffffff"
+}
